@@ -1,0 +1,40 @@
+#===============HERANÇA JAVA (SUBCLASSE E SUPERCLASSE)===================#
+
+Em Java, é possível herdar atributos e métodos de uma classe para outra. Agrupamos o "conceito de herança" em duas categorias:
+
+    *subclasse (filho) - a classe que herda de outra classe
+    *superclasse (pai) - a classe sendo herdada de 
+
+Para herdar de uma classe, use a palavra-chave extends.
+
+No exemplo abaixo, a classe Car (subclasse) herda os atributos e métodos da classe Vehicle (superclasse):
+
+class Veiculo {
+  protected String marca = "Ford";         // Atributo veículo
+  public void ronco() {                     // Método do veículo
+    System.out.println("Tuut, tuut!");
+  }
+}
+
+class Carro extends Veiculo {
+  private String modeloDoVeiculo = "Mustang";    // Atributo carro
+  public static void main(String[] args) {
+
+    // Criado um objeto meuCarro
+    Carro meuCarro = new Carro();
+
+    // Chame o método ronco () (da classe Veiculo) no objeto meuCarro
+    meuCarro.ronco();
+
+    // Exibe o valor do atributo de marca (da classe Veiculo) e o valor do modeloDoVeiculo da classe Carro
+    System.out.println(meuCarro.marca + " " + meuCarro.modeloDoVeiculo);
+  }
+}
+
+#======================VOCÊ NOTOU O MODIFICADOR PROTECTED NO VEÍCULO?===================#
+
+Nós definimos o atributo marca no Veiculo para um modificador de acesso protected . Se estiver definido como private , a classe Carro não poderá acessá-lo.
+
+#==========POR QUE E QUANDO USAR "HERANÇA"?============#
+
+- É útil para reutilização de código: reutilize atributos e métodos de uma classe existente quando você criar uma nova classe. 

@@ -1,0 +1,60 @@
+#==============CLASSES E MÉTODOS ABSTRATOS DE JAVA===============#
+
+A abstração de dados é o processo de ocultar certos detalhes e mostrar apenas informações essenciais para o usuário.
+A abstração pode ser obtida com classes ou interfaces abstratas (sobre as quais você aprenderá mais no próximo capítulo).
+
+A palavra-chave abstract é um modificador de não acesso, usado para classes e métodos:
+
+    Classe abstrata: é uma classe restrita que não pode ser usada para criar objetos (para acessá-la, ela deve ser herdada de outra classe).
+
+    Método abstrato: só pode ser usado em uma classe abstrata e não possui corpo. O corpo é fornecido pela subclasse (herdada de). 
+
+Uma classe abstrata pode ter métodos abstratos e regulares:
+
+abstract class Animal {
+  public abstract void animalSound();
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+} 
+
+ Pelo exemplo acima, não é possível criar um objeto da classe Animal:
+ 
+ Animal myObj = new Animal(); // irá gerar um erro
+ 
+ Para acessar a classe abstrata, ela deve ser herdada de outra classe. Vamos converter a classe Animal para uma classe abstrata:
+
+ #===========LEMBRE-SE QUE USAMOS A PALAVRA-CHAVE extends PARA HERDAR DE UMA CLASSE.===============#
+
+// Abstract class
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class MyMainClass {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+} 
+ 
+
+Por que e quando usar classes e métodos abstratos?
+
+*Para obter segurança, oculte determinados detalhes e mostre apenas os detalhes importantes de um objeto.
+
+Nota: A abstração também pode ser obtida com Interfaces. 

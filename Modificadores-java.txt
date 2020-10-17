@@ -1,0 +1,57 @@
+#================MODIFICADORES===================#
+
+A palavra-chave public é um modificador de acesso , o que significa que é usada para definir o nível de acesso para classes, atributos, métodos e construtores.
+
+Nós dividimos os modificadores em dois grupos:
+
+*Modificadores de Acesso - controla o nível de acesso.
+*Modificadores sem acesso - não controlam o nível de acesso, mas fornecem outras funcionalidades.
+
+#===============MODIFICADORES DE ACESSO===================#
+
+Para as classes , você pode usar public ou default :
+
+Modificador      Descrição
+
+public           A classe é acessível por qualquer outra classe.
+
+default          A classe só é acessível por classes no mesmo pacote. Isso é usado quando você não especifica um modificador.
+
+ Para atributos, métodos e construtores , você pode usar um dos seguintes:
+
+Modificador      Descrição
+
+public           O código está acessível para todas as classes.
+
+private          O código só é acessível dentro da classe declarada.
+
+default          O código só é acessível no mesmo pacote. Isso é usado quando você não especifica um modificador.
+
+protected        O código está acessível no mesmo pacote e subclasses.
+
+#===================MODIFICADORES DE NÃO ACESSO=====================#
+
+ Para as calsses , você pode usar final ou abstract :
+
+Modificador      Descrição
+
+final            A classe não pode ser herdada por outras classes.
+
+abstract         A classe não pode ser usada para criar objetos para acessar uma classe abstrata, ela deve ser herdada de outra classe.
+
+ Para atributos e métodos , você pode usar um dos seguintes:
+
+Modificador      Descrição
+
+final            Atributos e métodos não podem ser substituídos / modificados.
+
+static           Atributos e métodos pertencem à classe, em vez de um objeto.
+
+abstract         Só pode ser usado em uma classe abstrata e só pode ser usado em métodos. O método não possui um corpo, por exemplo, abstract void run (); .
+                 O corpo é fornecido pela subclasse herdada.
+
+transient        Atributos e métodos são ignorados ao serializar o objeto que os contém.
+
+synchronized     Métodos só podem ser acessados por um thread de cada vez.
+
+volatile         O valor de um atributo não é armazenado em cache localmente e é sempre lido na "memória principal".
